@@ -84,7 +84,7 @@
 
   programs.firefox.enable = true;
   programs.fish.enable = true;
-  programs.zsh.enalbe = true;
+  programs.zsh.enable = true;
   environment.systemPackages = with pkgs; [
      wget
      fastfetch
