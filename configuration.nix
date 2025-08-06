@@ -8,7 +8,7 @@
     ];
 
   home-manager = {
-    specialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs; };
     users = {
       "alvy" = import ./mod/users/alvy-home.nix;
     };
