@@ -12,5 +12,6 @@
       ghostty
       prismlauncher
     ];
+    shell = pkgs.fish;
   };
 }
