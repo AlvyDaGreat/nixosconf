@@ -7,6 +7,13 @@
       ./mod/users/alvy.nix
     ];
 
+  home-manager = {
+    specialArgs = { inherit inputs; };
+    users = {
+      "alvy" = import ./mod/users/alvy-home.nix;
+    };
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
