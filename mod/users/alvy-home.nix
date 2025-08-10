@@ -59,6 +59,7 @@
     bind =
       [
         "$mod, F, exec, firefox"
+        "$mod, Q, exec, kitty"
         ", Print, exec, grimblast copy area"
       ]
       ++ (
