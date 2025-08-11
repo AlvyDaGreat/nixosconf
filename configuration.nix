@@ -94,10 +94,7 @@
 
 
   programs.firefox.enable = true;
-  programs.fish = {
-    enable = true;
-    oh-my-fish.enable = true;
-  };
+  programs.fish.enable = true;
   programs.zsh.enable = true;
   environment.systemPackages = with pkgs; [
       inetutils 
