@@ -100,10 +100,11 @@
   };
   programs.zsh.enable = true;
   environment.systemPackages = with pkgs; [
-     wget
-     fastfetch
-     tmux
-     git
+      inetutils 
+      wget
+      fastfetch
+      tmux
+      git
   ];
 
   # This value determines the NixOS release from which the default
