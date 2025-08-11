@@ -2,8 +2,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+    [
+      ./hardware-configuration.nix # Include the results of the hardware scan.
       ./mod/users/alvy.nix
     ];
 
