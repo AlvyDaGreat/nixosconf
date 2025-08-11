@@ -39,7 +39,6 @@
   };
 
   # Graphical
-  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.xserver.enable = true;
   programs.hyprland = {
@@ -78,8 +77,10 @@
   # services.xserver.libinput.enable = true;
 
   # Enable automatic login for the user.
+  services.displayManager.sddm.enable = true;
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "alvy";
+  services.displayManager.defaultSession = "Hyprland";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

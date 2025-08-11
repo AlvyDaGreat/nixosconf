@@ -60,6 +60,7 @@
       [
         "$mod, F, exec, firefox"
         "$mod, Q, exec, kitty"
+        "$mod, M, exec, loginctl terminate-user \"\""
         ", Print, exec, grimblast copy area"
       ]
       ++ (
