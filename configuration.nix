@@ -80,7 +80,7 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "alvy";
-  services.displayManager.defaultSession = "Hyprland (USWM)";
+  services.displayManager.defaultSession = "hyprland-uwsm";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
