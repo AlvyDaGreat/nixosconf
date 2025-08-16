@@ -81,6 +81,16 @@
           )
           9)
       );
+
+    general = {
+      gaps_in = 1;
+      gaps_out = 2;
+      border_size = 1;
+      "col.active_border" = "rgba(4caf50ff)";
+      "col.inactive_border" = "rgba(595959aa)";
+      layout = "dwindle";
+    };
+
     misc = {
       force_default_wallpaper = 1;
     };
