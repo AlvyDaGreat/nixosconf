@@ -19,6 +19,7 @@
       touchosc
 
       reaper
+      blender
 
       obs-studio
       obs-studio-plugins.distroav

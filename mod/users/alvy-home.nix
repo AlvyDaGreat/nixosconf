@@ -91,6 +91,43 @@
       layout = "dwindle";
     };
 
+    decoration = {
+      blur = {
+        enabled = true;
+        size = 4;
+        passes = 2;
+        new_optimizations = true;
+      };
+      rounding = 4;
+    };
+
+    animations = {
+      enabled = true;
+
+      bezier = [
+        "sigma, 0.05, 0.9, 0.1, 1"
+      ];
+
+      animation = [
+        "windows, 1, 4, sigma"
+        "windowsOut, 1, 4, default, popin 80%"
+        "border, 1, 10, default"
+        "borderangle, 1, 10, default"
+        "fade, 1, 3, default"
+        "workspaces, 1, 5, default"
+        "layers, 1, 3, sigma"
+      ];
+    };
+
+    dwindle = {
+      pseudotile = true;
+      preserve_split = true;
+    };
+
+    master = {
+      new_status = "slave";
+    };
+
     misc = {
       force_default_wallpaper = 1;
     };
