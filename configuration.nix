@@ -86,7 +86,7 @@
 
   # Enable automatic login for the user.
   services.displayManager.sddm.enable = true;
-  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.enable = false;
   services.displayManager.autoLogin.user = "alvy";
   services.displayManager.defaultSession = "hyprland-uwsm";
 
