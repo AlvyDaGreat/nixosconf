@@ -7,14 +7,22 @@
     extraGroups = [ "networkmanager" "wheel" "libvertd" ];
     packages = with pkgs; [
       kdePackages.kate
+
+      ghostty
+
       btop
       gping
-      ghostty
+
       steam
       prismlauncher
 
       touchosc
+      open-stage-control
+      
       reaper
+
+      obs-studio
+      obs-studio-plugins.distroav
     ];
     shell = pkgs.fish;
   };
