@@ -17,12 +17,13 @@
       prismlauncher
 
       touchosc
-      open-stage-control
-      
+
       reaper
 
       obs-studio
       obs-studio-plugins.distroav
+      obs-studio-plugins.obs-source-record
+      obs-studio-plugins.obs-move-transition
     ];
     shell = pkgs.fish;
   };

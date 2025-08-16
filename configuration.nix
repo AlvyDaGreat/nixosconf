@@ -101,6 +101,10 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
 
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
 
   programs.firefox.enable = true;
   programs.fish.enable = true;
@@ -111,6 +115,7 @@
       fastfetch
       tmux
       git
+      distrobox
   ];
 
   # This value determines the NixOS release from which the default
