@@ -10,7 +10,11 @@
       btop
       gping
       ghostty
+      steam
       prismlauncher
+
+      touchosc
+      reaper
     ];
     shell = pkgs.fish;
   };
