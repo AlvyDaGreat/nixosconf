@@ -81,7 +81,9 @@
           )
           9)
       );
-
+    misc = {
+      force_default_wallpaper = 1;
+    };
   };
 
   wayland.windowManager.hyprland.plugins = [
