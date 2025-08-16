@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -60,6 +60,7 @@
       [
         "$mod, F, exec, firefox"
         "$mod, Q, exec, kitty"
+        "$mod, Return, exec, kitty"
         "$mod, M, exec, loginctl terminate-user \"\""
         ", Print, exec, grimblast copy area"
       ]
@@ -75,10 +76,11 @@
           )
           9)
       );
+
   };
 
   wayland.windowManager.hyprland.plugins = [
-    pkgs.hyprlandPlugins.hyprsplit
+    inputs.hyprsplit.packages."${pkgs.system}".hyprsplit
   ];
 
   # Home Manager can also manage your environment variables through

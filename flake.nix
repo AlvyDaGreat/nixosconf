@@ -8,6 +8,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprsplit = {
+      url = "github:shezdy/hyprsplit";
+      
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
