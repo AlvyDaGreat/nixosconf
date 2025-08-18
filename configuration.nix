@@ -33,6 +33,7 @@
   networking.networkmanager.enable = true;
   services.tailscale.enable = true;
   services.openssh.enable = true;
+  services.avahi.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
