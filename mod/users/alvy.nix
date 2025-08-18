@@ -6,8 +6,6 @@
     description = "Alvy";
     extraGroups = [ "networkmanager" "wheel" "libvertd" ];
     packages = with pkgs; [
-      kdePackages.kate
-
       ghostty
 
       btop
