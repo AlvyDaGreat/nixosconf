@@ -98,7 +98,7 @@
             let ws = i + 1;
             in [
               "$mod, code:1${toString i}, split:workspace, ${toString ws}"
-              "$mod SHIFT, code:1${toString i}, split:movetoworkspace, ${toString ws}"
+              "$mod SHIFT, code:1${toString i}, split:movetoworkspacesilent, ${toString ws}"
             ]
           )
           9)
@@ -168,6 +168,31 @@
   programs.ghostty.settings = {
     font-size = 12;
     theme = "Brogrammer";
+  };
+
+  programs.waybar.enable = true;
+  programs.waybar.settings = {
+    layer = "top";
+    position = "bottom";
+    modules-left = [ "hyprland/workspaces" ];
+    modules-middle = [ "hyprland/window" ];
+    modules-right = [ "hyprland/tray" "cpu" "battery" "clock" ];
+
+    battery = {
+      format = "{icon} {capacity}%";
+      format-icons = ["" "" "" "" ""];
+    };
+    cpu = {
+      format = " cpu:{usage}%";
+      interval = 5;
+    };
+    clock = {
+      format-alt = "{:%a, %d. %b  %H:%M}";
+    };
+    "wlr/workspaces" = {
+      on-click = "activate";
+      sort-by-number = true;
+    };
   };
 
   # Home Manager can also manage your environment variables through

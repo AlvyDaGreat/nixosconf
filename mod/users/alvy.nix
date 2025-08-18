@@ -7,6 +7,8 @@
     extraGroups = [ "networkmanager" "wheel" "libvertd" ];
     packages = with pkgs; [
       ghostty
+      waybar
+      nerd-fonts.jetbrains-mono
 
       steam
       prismlauncher
@@ -15,11 +17,6 @@
 
       reaper
       blender
-
-      obs-studio
-      obs-studio-plugins.distroav
-      obs-studio-plugins.obs-source-record
-      obs-studio-plugins.obs-move-transition
     ];
     shell = pkgs.fish;
   };
