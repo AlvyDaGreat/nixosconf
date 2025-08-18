@@ -16,6 +16,7 @@
       touchosc
 
       reaper
+      sonobus
       blender
     ];
     shell = pkgs.fish;
