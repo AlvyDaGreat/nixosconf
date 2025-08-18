@@ -121,7 +121,18 @@
       waybar
       wofi
       nwg-drawer
+      killall
   ];
+
+  programs.obs-studio = {
+    enable = true;
+
+    plugins = with pkgs.obs-studio-plugins; [
+      distroav
+      obs-source-record
+      obs-move-transition
+    ];
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
