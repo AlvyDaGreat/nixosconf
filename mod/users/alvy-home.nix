@@ -61,6 +61,13 @@
 
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
+    exec-once = [
+      "hyprpaper"
+      "waybar"
+      "copyq --start-server"
+      "mako"
+      "wayvnc"
+    ];
     bind =
       [
         "$mod CTRL, return, exec, ghostty tmux"
@@ -171,7 +178,7 @@
   };
 
   programs.waybar.enable = true;
-  programs.waybar.settings = {
+  programs.waybar.settings = [{
     layer = "top";
     position = "bottom";
     modules-left = [ "hyprland/workspaces" ];
@@ -193,7 +200,7 @@
       on-click = "activate";
       sort-by-number = true;
     };
-  };
+  }];
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
