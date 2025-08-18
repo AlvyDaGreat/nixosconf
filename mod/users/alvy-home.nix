@@ -164,6 +164,7 @@
     inputs.hyprsplit.packages."${pkgs.system}".hyprsplit
   ];
 
+  progras.ghostty.enable = true;
   programs.ghostty.settings = {
     font-size = 12;
     theme = "Brogrammer";
