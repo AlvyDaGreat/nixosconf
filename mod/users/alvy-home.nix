@@ -85,8 +85,8 @@
         "$mod, up, movefocus, u"
         "$mod, down, movefocus, d"
 
-        "$mod, mouse_down, split-workspace, e+1"
-        "$mod, mouse_up, split-workspace, e-1"
+        "$mod, mouse_down, split:workspace, e+1"
+        "$mod, mouse_up, split:workspace, e-1"
 
         ",XF86MonBrightnessDown, exec, brightnessctl set 2%-"
         ",XF86MonBrightnessUp, exec, brightnessctl set 2%+"
@@ -97,8 +97,8 @@
         builtins.concatLists (builtins.genList (i:
             let ws = i + 1;
             in [
-              "$mod, code:1${toString i}, workspace, ${toString ws}"
-              "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+              "$mod, code:1${toString i}, split:workspace, ${toString ws}"
+              "$mod SHIFT, code:1${toString i}, split:movetoworkspace, ${toString ws}"
             ]
           )
           9)
