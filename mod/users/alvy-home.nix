@@ -79,11 +79,17 @@
         ", print, exec, grim -g \"$(slurp)\""
         "$mod SHIFT, C, exec, hyprpicker --autocopy"
         "SHIFT CTRL, escape, exec, gnome-system-monitor"
-        
+
         "$mod, left, movefocus, l"
         "$mod, right, movefocus, r"
         "$mod, up, movefocus, u"
         "$mod, down, movefocus, d"
+
+        "$mod, mouse_down, split-workspace, e+1"
+        "$mod, mouse_up, split-workspace, e-1"
+
+        ",XF86MonBrightnessDown, exec, brightnessctl set 2%-"
+        ",XF86MonBrightnessUp, exec, brightnessctl set 2%+"
       ]
       ++ (
         # workspaces
@@ -97,6 +103,11 @@
           )
           9)
       );
+
+    bindm = [
+      "$mod, mouse:272, movewindow"
+      "$mod, mouse:273, resizewindow"
+    ];
 
     general = {
       gaps_in = 1;

@@ -118,6 +118,9 @@
       fzf
       btop
       gping
+      waybar
+      wofi
+      nwg-drawer
   ];
 
   # This value determines the NixOS release from which the default
