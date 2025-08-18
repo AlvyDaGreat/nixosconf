@@ -63,11 +63,27 @@
     "$mod" = "SUPER";
     bind =
       [
-        "$mod, F, exec, firefox"
+        "$mod CTRL, return, exec, ghostty tmux"
+        "$mod, return, exec, ghostty"
         "$mod, Q, exec, kitty"
-        "$mod, Return, exec, kitty"
-        "$mod, M, exec, loginctl terminate-user \"\""
-        ", Print, exec, grimblast copy area"
+        "$mod, C, killactive,"
+        "$mod, W, killactive,"
+        "$mod, E, exec, thunar"
+        "$mod, V, togglefloating,"
+        "$mod, F, fullscreen"
+        "$mod, R, exec, wofi --show drun"
+        "ALT, Space, exec, wofi --show drun"
+        "$mod SHIFT, R, exec, nwg-drawer -nofs"
+        "$mod, P, pseudo, # dwindle"
+        "$mod, J, togglesplit, # dwindle"
+        ", print, exec, grim -g \"$(slurp)\""
+        "$mod SHIFT, C, exec, hyprpicker --autocopy"
+        "SHIFT CTRL, escape, exec, gnome-system-monitor"
+        
+        "$mod, left, movefocus, l"
+        "$mod, right, movefocus, r"
+        "$mod, up, movefocus, u"
+        "$mod, down, movefocus, d"
       ]
       ++ (
         # workspaces

@@ -115,6 +115,9 @@
       tmux
       git
       distrobox
+      fzf
+      btop
+      gping
   ];
 
   # This value determines the NixOS release from which the default

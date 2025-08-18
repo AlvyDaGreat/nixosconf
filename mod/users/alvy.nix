@@ -6,10 +6,10 @@
     description = "Alvy";
     extraGroups = [ "networkmanager" "wheel" "libvertd" ];
     packages = with pkgs; [
-      ghostty
+      wofi
+      nwg-drawer
 
-      btop
-      gping
+      ghostty
 
       steam
       prismlauncher
