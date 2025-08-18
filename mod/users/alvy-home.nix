@@ -177,30 +177,33 @@
     theme = "Brogrammer";
   };
 
-  programs.waybar.enable = true;
-  programs.waybar.settings = [{
-    layer = "top";
-    position = "bottom";
-    modules-left = [ "hyprland/workspaces" ];
-    modules-middle = [ "hyprland/window" ];
-    modules-right = [ "hyprland/tray" "cpu" "battery" "clock" ];
+  programs.waybar = {
+    enable = true;
+    style = builtins.readFile ./waybarstyle.css;
+    settings = [{
+      layer = "top";
+      position = "bottom";
+      modules-left = [ "hyprland/workspaces" ];
+      modules-middle = [ "hyprland/window" ];
+      modules-right = [ "hyprland/tray" "cpu" "battery" "clock" ];
 
-    battery = {
-      format = "{icon} {capacity}%";
-      format-icons = ["" "" "" "" ""];
-    };
-    cpu = {
-      format = " cpu:{usage}%";
-      interval = 5;
-    };
-    clock = {
-      format-alt = "{:%a, %d. %b  %H:%M}";
-    };
-    "wlr/workspaces" = {
-      on-click = "activate";
-      sort-by-number = true;
-    };
-  }];
+      battery = {
+        format = "{icon} {capacity}%";
+        format-icons = ["" "" "" "" ""];
+      };
+      cpu = {
+        format = " cpu:{usage}%";
+        interval = 5;
+      };
+      clock = {
+        format-alt = "{:%a, %d. %b  %H:%M}";
+      };
+      "wlr/workspaces" = {
+        on-click = "activate";
+        sort-by-number = true;
+      };
+    }];
+  };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
