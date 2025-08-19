@@ -67,6 +67,7 @@
       "copyq --start-server"
       "mako"
       "wayvnc"
+      "distrobox enter archlinux -- companion"
     ];
     bind =
       [
