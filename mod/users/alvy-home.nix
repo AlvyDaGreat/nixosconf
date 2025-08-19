@@ -228,7 +228,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "fluent-dark-green-compact";
+      name = "Fluent-green-Dark-compact";
       package = pkgs.fluent-gtk-theme.override {
         sizeVariants = [ "compact" ];
         themeVariants = [ "green" ];
