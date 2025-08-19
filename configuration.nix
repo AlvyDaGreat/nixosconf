@@ -131,6 +131,7 @@
       websocketd
       lsp-plugins
       reaper
+      mpv
   ];
 
   programs.obs-studio = {
