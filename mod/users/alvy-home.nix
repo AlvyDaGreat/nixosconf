@@ -205,6 +205,16 @@
     }];
   };
 
+  programs.hyprpaper.settings = {
+    preload = [
+      "https://chibi.alvy.moe/kCNFKw25GQFC.jpg"
+    ];
+
+    wallpaper = [
+      ",https://chibi.alvy.moe/kCNFKw25GQFC.jpg"
+    ];
+  };
+
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
   # shell provided by Home Manager. If you don't want to manage your shell

@@ -9,6 +9,8 @@
       ghostty
       waybar
       nerd-fonts.jetbrains-mono
+      hyprpaper
+      mpvpaper
 
       steam
       prismlauncher
