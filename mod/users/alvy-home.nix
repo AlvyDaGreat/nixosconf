@@ -217,7 +217,7 @@
     ];
 
     wallpaper = [
-      ","+thewallpaper
+      ",${thewallpaper}"
     ];
   };
 
