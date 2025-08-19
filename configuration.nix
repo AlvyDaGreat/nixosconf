@@ -133,6 +133,7 @@
       reaper
       mpv
       yt-dlp
+      pavucontrol
   ];
 
   programs.obs-studio = {
