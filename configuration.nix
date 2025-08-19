@@ -132,6 +132,7 @@
       lsp-plugins
       reaper
       mpv
+      yt-dlp
   ];
 
   programs.obs-studio = {
