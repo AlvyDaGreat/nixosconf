@@ -205,7 +205,7 @@
     }];
   };
 
-  programs.hyprpaper.settings = {
+  services.hyprpaper.settings = {
     preload = [
       "https://chibi.alvy.moe/kCNFKw25GQFC.jpg"
     ];
