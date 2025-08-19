@@ -147,6 +147,7 @@
       distroav
       obs-source-record
       obs-move-transition
+      teleport
     ];
   };
 
