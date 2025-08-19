@@ -204,14 +204,20 @@
       };
     }];
   };
-
-  services.hyprpaper.settings = {
+  services.hyprpaper.settings = 
+  let
+    thewallpaper = builtins.fetchurl {
+      url = "https://chibi.alvy.moe/kCNFKw25GQFC.jpg";
+      sha256 = "9e75765abed0a8ffc65caf894ebc73ecdc3bf1821dae55bfdea4499e5e5636dd";
+    };
+  in
+  {
     preload = [
-      "https://chibi.alvy.moe/kCNFKw25GQFC.jpg"
+      thewallpaper
     ];
 
     wallpaper = [
-      ",https://chibi.alvy.moe/kCNFKw25GQFC.jpg"
+      ","+thewallpaper
     ];
   };
 
