@@ -175,6 +175,7 @@
   programs.ghostty.settings = {
     font-size = 12;
     theme = "Brogrammer";
+    background-opacity = 0.95;
   };
 
   programs.waybar = {
