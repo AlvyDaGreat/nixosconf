@@ -133,6 +133,7 @@
       reaper
       mpv
       yt-dlp
+      capitaine-cursors
   ];
 
   programs.obs-studio = {
