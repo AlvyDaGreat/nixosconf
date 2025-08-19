@@ -153,9 +153,9 @@
       ];
     };
 
-    windowrule = {
+    windowrule = [
       "opacity 0.95 0.8, class:(ghostty)"
-    };
+    ];
 
     dwindle = {
       pseudotile = true;
