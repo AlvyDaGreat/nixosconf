@@ -228,7 +228,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Colloid-Green-Dark-Gruvbox";
+      name = "fluent-dark-green-compact";
       package = pkgs.fluent-gtk-theme.override {
         sizeVariants = [ "compact" ];
         themeVariants = [ "green" ];
