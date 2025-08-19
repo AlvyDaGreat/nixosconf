@@ -129,6 +129,8 @@
       qjackctl
       carla
       websocketd
+      lsp-plugins
+      reaper
   ];
 
   programs.obs-studio = {
@@ -141,6 +143,7 @@
       obs-teleport
       obs-source-record
       obs-aitum-multistream
+      obs-pipewire-audio-capture
 
       obs-move-transition
       obs-source-clone

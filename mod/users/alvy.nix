@@ -17,7 +17,6 @@
 
       touchosc
 
-      reaper
       blender
     ];
     shell = pkgs.fish;
