@@ -38,6 +38,17 @@
     nssmdns = true;
   };
 
+  # bt
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+          Experimental = true; # Show battery charge of Bluetooth devices
+      };
+    };
+  };
+  services.blueman.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;

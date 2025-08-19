@@ -175,7 +175,7 @@
   programs.ghostty.settings = {
     font-size = 12;
     theme = "Brogrammer";
-    background-opacity = 0.95;
+    background-opacity = 0.9;
   };
 
   programs.waybar = {
@@ -186,7 +186,7 @@
       position = "bottom";
       modules-left = [ "hyprland/workspaces" ];
       modules-middle = [ "hyprland/window" ];
-      modules-right = [ "hyprland/tray" "cpu" "battery" "clock" ];
+      modules-right = [ "tray" "cpu" "battery" "clock" ];
 
       battery = {
         format = "{icon} {capacity}%";
