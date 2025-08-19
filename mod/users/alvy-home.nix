@@ -225,6 +225,31 @@
     ];
   };
 
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Colloid-Green-Dark-Gruvbox";
+      package = pkgs.fluent-gtk-theme.override {
+        sizeVariants = [ "compact" ];
+        themeVariants = [ "green" ];
+
+      };
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme.override { color = "green"; };
+    };
+    cursorTheme = {
+      name = "capitaine-cursors";
+      package = pkgs.capitaine-cursors;
+    };
+  };
+
+  home.pointerCursor = {
+    name = "capitaine-cursors";
+    package = pkgs.capitaine-cursors;
+  };
+
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
   # shell provided by Home Manager. If you don't want to manage your shell
