@@ -128,6 +128,7 @@
       qpwgraph
       qjackctl
       carla
+      websocketd
   ];
 
   programs.obs-studio = {
@@ -135,11 +136,17 @@
 
     plugins = with pkgs.obs-studio-plugins; [
       distroav
-      obs-source-record
-      obs-move-transition
       obs-teleport
+      obs-source-record
+      obs-aitum-multistream
+
+      obs-move-transition
+      obs-source-clone
+      obs-shaderfilter
+      obs-color-monitor
       obs-source-switcher
       obs-transition-table
+      obs-stroke-glow-shadow
       advanced-scene-switcher
     ];
   };
