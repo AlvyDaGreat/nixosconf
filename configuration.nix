@@ -38,18 +38,6 @@
     nssmdns = true;
   };
 
-  # bt
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-    settings = {
-      General = {
-          Experimental = true; # Show battery charge of Bluetooth devices
-      };
-    };
-  };
-  services.blueman.enable = true;
-
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -137,7 +125,9 @@
       waybar
       wofi
       nwg-drawer
-      killall
+      qpwgraph
+      qjackctl
+      carla
   ];
 
   programs.obs-studio = {
@@ -147,7 +137,10 @@
       distroav
       obs-source-record
       obs-move-transition
-      teleport
+      obs-teleport
+      obs-source-switcher
+      obs-transition-table
+      advanced-scene-switcher
     ];
   };
 
