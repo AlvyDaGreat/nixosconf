@@ -204,6 +204,8 @@
       };
     }];
   };
+
+  services.hyprpaper.enable = true;
   services.hyprpaper.settings = 
   let
     thewallpaper = builtins.fetchurl {
