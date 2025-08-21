@@ -1,12 +1,5 @@
 { config, pkgs, inputs, spicetify-nix,... }:
-let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
-in
 {
-  imports = [
-    spicetify-nix.homeManagerModules.spicetify
-  ];
-
   nixpkgs.config.allowUnfree = true;
 
 
@@ -260,6 +253,9 @@ in
   };
 
   programs.spicetify = 
+  let
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
+  in
   {
     enable = true;
     enabledExtensions = with spicePkgs.extensions; [

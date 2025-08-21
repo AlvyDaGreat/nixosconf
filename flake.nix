@@ -29,6 +29,7 @@
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
+        inputs.spicetify-nix.homeManagerModules.default
       ];
     };
   };
