@@ -1,8 +1,8 @@
-{ config, pkgs, inputs, spicetify-nix, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
-    spicetify-nix.homeManagerModules.spicetify
+    inputs.spicetify-nix.homeManagerModules.spicetify
   ];
 
 
