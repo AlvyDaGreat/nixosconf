@@ -1,5 +1,7 @@
 { config, pkgs, inputs, ... }:
-
+let
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
+in
 {
   imports = [
     inputs.spicetify-nix.homeManagerModules.spicetify
@@ -41,7 +43,6 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    spicetify
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -259,9 +260,6 @@
   };
 
   programs.spicetify = 
-  let
-    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
-  in
   {
     enable = true;
     enabledExtensions = with spicePkgs.extensions; [
