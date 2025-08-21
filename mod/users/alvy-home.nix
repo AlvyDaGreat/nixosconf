@@ -1,5 +1,9 @@
-{ config, pkgs, inputs, spicetify-nix,... }:
+{ config, pkgs, inputs, ... }:
 {
+  imports = [
+    inputs.spicetify-nix.homeManagerModules.spicetify
+  ];
+
   nixpkgs.config.allowUnfree = true;
 
 
