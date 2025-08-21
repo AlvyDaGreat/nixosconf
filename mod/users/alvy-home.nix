@@ -3,6 +3,10 @@ let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
 in
 {
+  imports = [
+    spicetify-nix.homeManagerModules.spicetify
+  ];
+
   nixpkgs.config.allowUnfree = true;
 
 
