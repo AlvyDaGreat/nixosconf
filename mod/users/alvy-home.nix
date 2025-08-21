@@ -266,6 +266,7 @@
     enabledExtensions = with spicePkgs.extensions; [
       beautifulLyrics
     ];
+    theme = spicePkgs.themes.default;
   };
 
   # Home Manager can also manage your environment variables through
