@@ -113,27 +113,27 @@
   programs.fish.enable = true;
   programs.zsh.enable = true;
   environment.systemPackages = with pkgs; [
-      inetutils 
-      wget
-      fastfetch
-      tmux
-      git
-      distrobox
-      fzf
-      btop
-      gping
-      waybar
-      wofi
-      nwg-drawer
-      qpwgraph
-      qjackctl
-      carla
-      websocketd
-      lsp-plugins
-      reaper
-      mpv
-      yt-dlp
-      pavucontrol
+    inetutils 
+    wget
+    fastfetch
+    tmux
+    git
+    distrobox
+    fzf
+    btop
+    gping
+    waybar
+    wofi
+    nwg-drawer
+    qpwgraph
+    qjackctl
+    carla
+    websocketd
+    lsp-plugins
+    reaper
+    mpv
+    yt-dlp
+    pavucontrol
   ];
 
   programs.obs-studio = {

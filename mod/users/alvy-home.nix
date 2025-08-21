@@ -1,6 +1,11 @@
 { config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    spicetify-nix.homeManagerModules.spicetify 
+  ];
+
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "alvy";
@@ -248,6 +253,17 @@
   home.pointerCursor = {
     name = "capitaine-cursors";
     package = pkgs.capitaine-cursors;
+  };
+
+  programs.spicetify = 
+  let
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
+  in
+  {
+    enable = true;
+    enabledExtensions = with spicePkgs.extensions; [
+      beautifulLyrics
+    ];
   };
 
   # Home Manager can also manage your environment variables through
