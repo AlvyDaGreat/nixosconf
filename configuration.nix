@@ -12,6 +12,9 @@
     users = {
       "alvy" = import ./mod/users/alvy-home.nix;
     };
+    modules = [
+      inputs.spicetify-nix.homeManagerModules.default
+    ];
   };
 
   # cache for hyprland and stuff
