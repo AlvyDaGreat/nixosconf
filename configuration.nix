@@ -18,7 +18,7 @@
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
-  nixpkgs.overlays = [ copyparty.overlays.default ];
+  nixpkgs.overlays = [ inputs.copyparty.overlays.default ];
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -111,6 +111,57 @@
   virtualisation.podman = {
     enable = true;
     dockerCompat = true;
+  };
+
+  services.copyparty = {
+    enable = true;
+
+    settings = {
+      i = "0.0.0.0";
+      p = [ 3923 ];
+      no-reload = true;
+    };
+
+    # create users
+    accounts = {
+      alvy.passwordFile = "/run/keys/copyparty/alvy_password";
+
+      madre.passwordFile = "/run/keys/copyparty/madre_password";
+      padre.passwordFile = "/run/keys/copyparty/padre_password";
+    };
+
+    # create a volume
+    volumes = {
+      "/" = {
+        path = "/var/lib/copyparty-jail";
+        access = {
+          r = "*";
+        };
+        flags = {
+          grid = true;
+        };
+      };
+
+      "/Desktop" = {
+        # share the contents of "/srv/copyparty"
+        path = "/home/alvy/Desktop";
+        access = {
+          r = "*";
+          rw = [ "alvy" ];
+        };
+        flags = {
+          # "fk" enables filekeys (necessary for upget permission) (4 chars long)
+          fk = 4;
+          # scan for new files every 60sec
+          scan = 60;
+          # volflag "e2d" enables the uploads database
+          e2d = true;
+          grid = true;
+        };
+      };
+    };
+    # you may increase the open file limit for the process
+    openFilesLimit = 8192;
   };
 
   programs.firefox.enable = true;
