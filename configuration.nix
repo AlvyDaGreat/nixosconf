@@ -125,9 +125,6 @@
     # create users
     accounts = {
       alvy.passwordFile = "/run/keys/copyparty/alvy_password";
-
-      madre.passwordFile = "/run/keys/copyparty/madre_password";
-      padre.passwordFile = "/run/keys/copyparty/padre_password";
     };
 
     # create a volume
