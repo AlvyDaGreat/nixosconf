@@ -160,6 +160,8 @@
     # you may increase the open file limit for the process
     openFilesLimit = 8192;
   };
+  # gay
+  systemd.services.copyparty.serviceConfig.AmbientCapabilities = "CAP_NET_BIND_SERVICE";
 
   programs.firefox.enable = true;
   programs.fish.enable = true;
