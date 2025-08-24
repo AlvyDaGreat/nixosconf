@@ -115,6 +115,7 @@
 
   services.copyparty = {
     enable = true;
+    user = "root";
 
     settings = {
       i = "0.0.0.0";
