@@ -7,12 +7,9 @@
       ./mod/users/alvy.nix
     ];
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "alvy" = import ./mod/users/alvy-home.nix;
-    };
-  };
+  ## NIX SETTINGS
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # cache for hyprland and stuff
   nix.settings = {
@@ -21,11 +18,18 @@
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
+  nixpkgs.overlays = [ copyparty.overlays.default ];
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "alvy" = import ./mod/users/alvy-home.nix;
+    };
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.hostName = "bananapeelnix"; # hostname.
 

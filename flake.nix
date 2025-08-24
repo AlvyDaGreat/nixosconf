@@ -19,6 +19,8 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    copyparty.url = "github:9001/copyparty";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -29,6 +31,7 @@
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
+        inputs.copyparty.nixosModules.default
       ];
     };
   };
