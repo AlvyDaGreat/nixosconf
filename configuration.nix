@@ -144,7 +144,7 @@
         path = "/home/alvy/Desktop";
         access = {
           r = "*";
-          rw = [ "alvy" ];
+          rwdma = [ "alvy" ];
         };
         flags = {
           # "fk" enables filekeys (necessary for upget permission) (4 chars long)
