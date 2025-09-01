@@ -186,6 +186,7 @@
     mpv
     yt-dlp
     pavucontrol
+    appimage-run
   ];
 
   programs.obs-studio = {
