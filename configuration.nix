@@ -167,6 +167,7 @@
   environment.systemPackages = with pkgs; [
     inetutils 
     curl
+    gnutls
     wget
     fastfetch
     tmux
@@ -189,10 +190,6 @@
     pavucontrol
     appimage-run
   ];
-
-  pkgs.curl.override = {
-    gnutilsSupport = true;
-  };
 
   programs.obs-studio = {
     enable = true;
