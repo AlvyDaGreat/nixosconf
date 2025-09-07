@@ -188,6 +188,7 @@
     mpv
     yt-dlp
     pavucontrol
+    gearlever
     appimage-run
   ];
 
