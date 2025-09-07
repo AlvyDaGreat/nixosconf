@@ -190,7 +190,7 @@
     appimage-run
   ];
 
-  curl.override = {
+  programs.curl.override = {
     gnutilsSupport = true;
   };
 
