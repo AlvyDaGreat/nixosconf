@@ -146,6 +146,7 @@
     gnome-keyring
     ungoogled-chromium
     vivaldi
+    wayvnc
   ];
 
   programs.obs-studio = {
