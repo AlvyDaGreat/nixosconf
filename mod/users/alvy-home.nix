@@ -72,7 +72,7 @@
       "waybar"
       "copyq --start-server"
       "mako"
-      "wayvnc"
+      "wayvnc 0.0.0.0 --config ~/TVDATASYNC/wayvnc_config"
       "distrobox enter archlinux -- companion"
     ];
     bind =

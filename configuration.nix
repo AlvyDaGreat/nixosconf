@@ -147,6 +147,7 @@
     ungoogled-chromium
     vivaldi
     wayvnc
+    nodejs_24
   ];
 
   programs.obs-studio = {
