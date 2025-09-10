@@ -193,6 +193,7 @@
     vscode
     gnome-keyring
     ungoogled-chromium
+    vivaldi
   ];
 
   programs.obs-studio = {
