@@ -192,6 +192,7 @@
     appimage-run
     vscode
     gnome-keyring
+    ungoogled-chromium
   ];
 
   programs.obs-studio = {
