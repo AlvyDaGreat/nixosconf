@@ -191,6 +191,7 @@
     gearlever
     appimage-run
     vscode
+    gnome-keyring
   ];
 
   programs.obs-studio = {
