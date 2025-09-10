@@ -190,6 +190,7 @@
     pavucontrol
     gearlever
     appimage-run
+    vscode
   ];
 
   programs.obs-studio = {
