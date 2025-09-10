@@ -1,0 +1,47 @@
+services.copyparty = {
+    enable = true;
+
+    settings = {
+      i = "0.0.0.0";
+      p = [ 3923 ];
+      no-reload = true;
+    };
+
+    # create users
+    accounts = {
+      alvy.passwordFile = "/run/keys/copyparty/alvy_password";
+    };
+
+    # create a volume
+    volumes = {
+      "/" = {
+        path = "/var/lib/copyparty-jail";
+        access = {
+          r = "*";
+        };
+        flags = {
+          grid = true;
+        };
+      };
+
+      "/Desktop" = {
+        # share the contents of "/srv/copyparty"
+        path = "/home/alvy/Desktop";
+        access = {
+          r = "*";
+          rwdma = [ "alvy" ];
+        };
+        flags = {
+          # "fk" enables filekeys (necessary for upget permission) (4 chars long)
+          fk = 4;
+          # scan for new files every 60sec
+          scan = 60;
+          # volflag "e2d" enables the uploads database
+          e2d = true;
+          grid = true;
+        };
+      };
+    };
+    # you may increase the open file limit for the process
+    openFilesLimit = 8192;
+  };
