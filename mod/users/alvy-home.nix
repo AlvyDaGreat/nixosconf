@@ -270,7 +270,7 @@
 
   services.syncthing = {
     enable = true;
-    guiAddress = "0.0.0.0:8384"
+    guiAddress = "0.0.0.0:8384";
   };
 
   # Home Manager can also manage your environment variables through
