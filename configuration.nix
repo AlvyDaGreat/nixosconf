@@ -148,6 +148,7 @@
     vivaldi
     wayvnc
     nodejs_24
+    bitfocus-companion
   ];
 
   programs.obs-studio = {
